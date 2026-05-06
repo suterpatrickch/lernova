@@ -1,6 +1,6 @@
 [project]
 site_name = "Lernova"
-site_url = "https://lernova2.pages.dev"
+site_url = "site_url = "https://suterpatrickch.github.io/lernova/"
 site_description = "Eine kostenlose Lernplattform für Wirtschaft, Recht, Geld und Lebenskompetenzen."
 site_author = "Lernova"
 docs_dir = "docs"

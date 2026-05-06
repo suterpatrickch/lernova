@@ -1,36 +1,51 @@
-# Lernova Proof of Concept
+# Lernova – Zensical Proof of Concept
 
-Dies ist ein statischer Proof of Concept für Lernova mit MkDocs Material.
+Dies ist eine moderne Zensical-Version des Lernova-Prototyps.
+
+## Cloudflare Pages / Workers & Pages
+
+Build command:
+
+```bash
+pip install -r requirements.txt && zensical build
+```
+
+Deploy command, falls Cloudflare es verlangt:
+
+```bash
+npx wrangler pages deploy site --project-name DEIN-PROJEKTNAME
+```
+
+Beispiel:
+
+```bash
+npx wrangler pages deploy site --project-name lernova2
+```
+
+Root directory:
+
+```text
+/
+```
+
+## Struktur
+
+```text
+docs/               Inhalte im Markdown-Format
+docs/stylesheets/   Lernova Design-CSS
+zensical.toml        Zensical-Konfiguration
+requirements.txt     Python-Abhängigkeit
+```
 
 ## Lokal testen
 
 ```bash
 pip install -r requirements.txt
-mkdocs serve
+zensical serve
 ```
 
-Dann im Browser öffnen: http://127.0.0.1:8000
-
-## Build für Hosting
+## Build lokal
 
 ```bash
-mkdocs build
+zensical build
 ```
-
-Die fertige Webseite liegt danach im Ordner `site/`.
-
-## Deployment auf Cloudflare Pages
-
-Empfohlen:
-
-1. Repository auf GitHub erstellen.
-2. Diese Dateien hochladen.
-3. In Cloudflare Pages neues Projekt erstellen.
-4. GitHub-Repository verbinden.
-5. Build command: `mkdocs build`
-6. Build output directory: `site`
-7. Veröffentlichen.
-
-Kostenlose Test-Domain z.B.: `lernova.pages.dev`
-
-Hinweis: Falls du `lenovapages.def` meintest, ist vermutlich `lernova.pages.dev` gemeint.

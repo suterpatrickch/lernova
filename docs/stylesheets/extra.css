@@ -1,0 +1,177 @@
+:root {
+  --ln-green: #1da672;
+  --ln-blue: #2d78ff;
+  --ln-purple: #845ef7;
+  --ln-ink: #111827;
+  --ln-muted: #6b7280;
+  --ln-card: rgba(255,255,255,.82);
+  --ln-border: rgba(17,24,39,.10);
+  --ln-soft: #f6f8ff;
+}
+
+.md-header {
+  background: linear-gradient(90deg, #111827, #1f2a60 55%, #5636c7);
+}
+
+.md-main__inner { max-width: 1500px; }
+
+.md-typeset h1 {
+  font-size: clamp(2.1rem, 4vw, 4rem);
+  font-weight: 850;
+  letter-spacing: -0.05em;
+  margin-bottom: .25rem;
+}
+
+.md-typeset h2 {
+  font-weight: 820;
+  letter-spacing: -0.03em;
+}
+
+.ln-subline {
+  font-size: .92rem;
+  color: var(--ln-muted);
+  margin: -0.35rem 0 1.2rem;
+  line-height: 1.45;
+}
+
+.ln-hero {
+  padding: 3rem 2.2rem;
+  border-radius: 2rem;
+  background:
+    radial-gradient(circle at top right, rgba(132,94,247,.22), transparent 35%),
+    radial-gradient(circle at bottom left, rgba(45,120,255,.18), transparent 35%),
+    linear-gradient(135deg, #f8fbff, #eef2ff);
+  border: 1px solid var(--ln-border);
+  margin: 1.2rem 0 2rem;
+}
+
+.ln-hero p { max-width: 780px; font-size: 1.15rem; color: #334155; }
+
+.ln-badges { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+.ln-badge {
+  border-radius: 999px;
+  padding: .35rem .75rem;
+  background: rgba(255,255,255,.75);
+  border: 1px solid var(--ln-border);
+  font-weight: 650;
+  font-size: .85rem;
+}
+
+.ln-topic-grid, .ln-source-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 1.4rem;
+}
+
+.ln-topic-card, .ln-source-card {
+  display: block;
+  padding: 1.15rem;
+  border: 1px solid var(--ln-border);
+  border-radius: 1.25rem;
+  background: var(--ln-card);
+  box-shadow: 0 12px 32px rgba(17,24,39,.06);
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.ln-topic-card:hover, .ln-source-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 42px rgba(17,24,39,.10);
+  border-color: rgba(45,120,255,.35);
+}
+
+.ln-topic-card strong, .ln-source-card strong {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: .25rem;
+}
+
+.ln-topic-card span, .ln-source-card span {
+  display: block;
+  color: var(--ln-muted);
+  font-size: .9rem;
+  line-height: 1.45;
+}
+
+.ln-keyline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin: .7rem 0 1rem;
+}
+.ln-keyline span {
+  padding: .28rem .65rem;
+  border-radius: 999px;
+  background: var(--ln-soft);
+  border: 1px solid var(--ln-border);
+  font-size: .78rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.ln-box {
+  border: 1px solid var(--ln-border);
+  border-radius: 1.2rem;
+  padding: 1rem 1.1rem;
+  background: rgba(255,255,255,.75);
+  margin: .9rem 0;
+}
+
+.ln-box h4 { margin: 0 0 .35rem; font-size: 1rem; }
+
+.ln-more {
+  border: 1px solid var(--ln-border);
+  border-radius: 1rem;
+  padding: .7rem 1rem;
+  background: rgba(248,250,252,.72);
+  margin: .8rem 0;
+}
+.ln-more summary { cursor: pointer; font-weight: 750; }
+
+.ln-btn, .ln-quiz button {
+  border: none;
+  border-radius: .85rem;
+  padding: .65rem .9rem;
+  margin: .25rem .35rem .25rem 0;
+  background: #111827;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+.ln-quiz button:nth-of-type(2) { background: #e5e7eb; color: #111827; }
+.ln-feedback { margin-top: .5rem; font-weight: 700; }
+
+.ln-checklist li { margin-bottom: .35rem; }
+
+pre[id^="prompt-"] {
+  white-space: pre-wrap;
+  border-radius: 1rem;
+  padding: 1rem;
+  background: #0f172a !important;
+  color: #e5e7eb !important;
+}
+
+.md-typeset .tabbed-set {
+  margin-top: 1rem;
+}
+
+.md-typeset .tabbed-labels {
+  position: sticky;
+  top: 3.1rem;
+  z-index: 5;
+  background: var(--md-default-bg-color);
+  border-bottom: 1px solid var(--ln-border);
+}
+
+.md-typeset .tabbed-labels > label {
+  font-weight: 820;
+  font-size: .95rem;
+}
+
+@media (max-width: 720px) {
+  .ln-hero { padding: 2rem 1.2rem; border-radius: 1.25rem; }
+  .md-typeset h1 { font-size: 2.2rem; }
+  .md-typeset .tabbed-labels { top: 2.4rem; }
+}

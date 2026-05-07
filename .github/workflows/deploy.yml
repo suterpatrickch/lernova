@@ -2,8 +2,7 @@ name: Deploy Lernova to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -12,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
@@ -21,20 +20,26 @@ jobs:
     steps:
       - name: Repository auschecken
         uses: actions/checkout@v4
+
       - name: Python einrichten
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
       - name: Abhängigkeiten installieren
         run: pip install -r requirements.txt
+
       - name: Webseite bauen
         run: zensical build
+
       - name: Pages konfigurieren
         uses: actions/configure-pages@v5
+
       - name: Artefakt hochladen
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
+
   deploy:
     environment:
       name: github-pages

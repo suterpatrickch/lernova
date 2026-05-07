@@ -1,0 +1,273 @@
+:root {
+  --ln-ink: #172033;
+  --ln-muted: #5f6b7a;
+  --ln-bg: #f7f4ec;
+  --ln-card: #ffffff;
+  --ln-line: rgba(23, 32, 51, 0.12);
+  --ln-green: #4caf7a;
+  --ln-blue: #4777d9;
+  --ln-purple: #8f5bd8;
+  --ln-orange: #f3a64a;
+}
+
+.md-header, .md-tabs {
+  box-shadow: none;
+}
+
+.md-main__inner {
+  margin-top: 0.8rem;
+}
+
+.md-content__inner {
+  max-width: 980px;
+}
+
+/* Kursartiger Hero */
+.ln-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.9fr);
+  gap: 2rem;
+  align-items: center;
+  padding: 3rem 0 2rem;
+}
+
+.ln-kicker {
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-weight: 800;
+  color: var(--ln-blue);
+  font-size: .78rem;
+}
+
+.ln-hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4.6rem);
+  line-height: .94;
+  margin: .3rem 0 1rem;
+  letter-spacing: -.06em;
+}
+
+.ln-lead {
+  font-size: 1.13rem;
+  color: var(--ln-muted);
+  max-width: 680px;
+}
+
+.ln-orbit {
+  border: 1px solid var(--ln-line);
+  border-radius: 2rem;
+  padding: 1.4rem;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(71, 119, 217, .22), transparent 32%),
+    radial-gradient(circle at 80% 65%, rgba(143, 91, 216, .18), transparent 34%),
+    linear-gradient(135deg, rgba(255,255,255,.95), rgba(255,255,255,.72));
+  box-shadow: 0 24px 80px rgba(23, 32, 51, .10);
+}
+
+.ln-orbit-card {
+  border-radius: 1.5rem;
+  padding: 1rem;
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(255,255,255,.7);
+  margin: .75rem 0;
+}
+
+/* Große Modulkarten */
+.ln-course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.ln-course-card {
+  display: block;
+  border: 1px solid var(--ln-line);
+  border-radius: 1.4rem;
+  padding: 1.1rem;
+  background: var(--ln-card);
+  color: inherit !important;
+  text-decoration: none !important;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.ln-course-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 55px rgba(23, 32, 51, .12);
+  border-color: rgba(71, 119, 217, .35);
+}
+
+.ln-course-card .icon {
+  font-size: 1.8rem;
+}
+
+.ln-course-card h3 {
+  margin: .4rem 0 .3rem;
+}
+
+.ln-course-card p {
+  color: var(--ln-muted);
+  margin: 0;
+}
+
+/* Level Navigation und Tabs */
+.ln-level-intro {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0 1.25rem;
+}
+
+.ln-pill {
+  border: 1px solid var(--ln-line);
+  border-radius: 999px;
+  padding: .35rem .7rem;
+  font-weight: 700;
+  background: rgba(255,255,255,.7);
+  font-size: .85rem;
+}
+
+.md-typeset .tabbed-set {
+  margin-top: 1rem;
+}
+
+.md-typeset .tabbed-labels {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--md-default-bg-color);
+  padding-top: .4rem;
+  border-bottom: 1px solid var(--ln-line);
+}
+
+.md-typeset .tabbed-labels > label {
+  font-weight: 800;
+  border-radius: .8rem .8rem 0 0;
+}
+
+/* Kurze statt lange Texte */
+.ln-brief {
+  font-size: 1.05rem;
+  border-left: 4px solid var(--ln-blue);
+  padding: .8rem 1rem;
+  background: rgba(71, 119, 217, .07);
+  border-radius: .8rem;
+}
+
+.ln-keyline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: .75rem 0 1rem;
+}
+
+.ln-keyline span {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: rgba(23, 32, 51, .06);
+  padding: .25rem .58rem;
+  font-size: .84rem;
+  font-weight: 700;
+}
+
+/* Mehr anzeigen */
+.md-typeset details.ln-more {
+  border: 1px solid var(--ln-line);
+  border-radius: 1rem;
+  padding: .7rem 1rem;
+  background: rgba(255,255,255,.74);
+  margin: 1rem 0;
+}
+
+.md-typeset details.ln-more summary {
+  cursor: pointer;
+  font-weight: 800;
+}
+
+/* Aufgaben, Quellen, Prompts */
+.ln-box {
+  border: 1px solid var(--ln-line);
+  border-radius: 1.2rem;
+  padding: 1rem;
+  background: rgba(255,255,255,.88);
+  margin: 1rem 0;
+}
+
+.ln-box h4 {
+  margin-top: 0;
+}
+
+.ln-action-row {
+  display: flex;
+  gap: .7rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.ln-btn, button.ln-btn {
+  border: 0;
+  border-radius: 999px;
+  padding: .65rem .95rem;
+  font-weight: 800;
+  background: var(--ln-ink);
+  color: white;
+  cursor: pointer;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+.ln-btn.secondary {
+  background: rgba(23,32,51,.08);
+  color: var(--ln-ink);
+}
+
+.ln-feedback {
+  margin-top: .75rem;
+  padding: .75rem;
+  border-radius: .8rem;
+  background: rgba(76, 175, 122, .12);
+  display: none;
+}
+
+.ln-feedback.show {
+  display: block;
+}
+
+.ln-quiz button {
+  margin: .35rem .35rem .35rem 0;
+  border: 1px solid var(--ln-line);
+  background: white;
+  color: var(--ln-ink);
+  border-radius: .8rem;
+  padding: .55rem .75rem;
+  cursor: pointer;
+}
+
+.ln-quiz button:hover {
+  border-color: var(--ln-blue);
+}
+
+.ln-source-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: .8rem;
+}
+
+.ln-source-card {
+  border: 1px solid var(--ln-line);
+  border-radius: 1rem;
+  padding: .9rem;
+  background: white;
+}
+
+.ln-source-card strong {
+  display: block;
+  margin-bottom: .25rem;
+}
+
+@media (max-width: 760px) {
+  .ln-hero { grid-template-columns: 1fr; }
+  .md-typeset .tabbed-labels { top: 0; overflow-x: auto; flex-wrap: nowrap; }
+}

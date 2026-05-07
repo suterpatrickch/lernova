@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120" role="img" aria-label="Lernova Logo">
-  <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0%" stop-color="#7c3aed"/><stop offset="60%" stop-color="#2563eb"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient></defs>
-  <rect width="500" height="120" rx="28" fill="#080b1a"/>
-  <circle cx="70" cy="60" r="30" fill="url(#g)" opacity=".95"/>
-  <path d="M70 24 L78 52 L106 60 L78 68 L70 96 L62 68 L34 60 L62 52 Z" fill="white" opacity=".95"/>
-  <text x="125" y="72" font-family="Inter,Arial,sans-serif" font-size="44" font-weight="800" fill="white">Lernova</text>
-  <text x="130" y="95" font-family="Inter,Arial,sans-serif" font-size="14" fill="#a5b4fc">Verstehen · Anwenden · Beurteilen</text>
-</svg>

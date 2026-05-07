@@ -1,0 +1,87 @@
+[project]
+site_name = "Lernova"
+site_url = "https://example.github.io/lernova/"
+site_description = "Lernwege, Lebenssituationen und KI-Trainings für Wirtschaft & Recht auf Sekundarstufe II."
+site_author = "Lernova"
+docs_dir = "docs"
+site_dir = "site"
+copyright = "© Lernova – Proof of Concept"
+extra_css = ["stylesheets/extra.css"]
+extra_javascript = ["javascripts/interactions.js"]
+nav = [
+  {"Start" = "index.md"},
+  {"Lernwege" = [
+    "lernwege/index.md",
+    {"WR Basics" = "lernwege/wr-basics.md"},
+    {"Matura / BM / WMS" = "lernwege/matura-bm-wms.md"},
+    {"Leben & Zukunft" = "lernwege/leben-zukunft.md"}
+  ]},
+  {"Wirtschaft" = [
+    "wirtschaft/index.md",
+    {"Grundfragen des Wirtschaftens" = "wirtschaft/grundfragen.md"},
+    {"Wirtschaftskreislauf" = "wirtschaft/wirtschaftskreislauf.md"}
+  ]},
+  {"Unternehmen" = [
+    "unternehmen/index.md",
+    {"Unternehmensmodell" = "unternehmen/unternehmensmodell.md"},
+    {"Marketing" = "unternehmen/marketing.md"}
+  ]},
+  {"Recht" = [
+    "recht/index.md",
+    {"Grundlagen des Rechts" = "recht/grundlagen-recht.md"},
+    {"Kaufvertrag" = "recht/kaufvertrag.md"}
+  ]},
+  {"Volkswirtschaft" = [
+    "volkswirtschaft/index.md",
+    {"Märkte & Preisbildung" = "volkswirtschaft/maerkte-preisbildung.md"},
+    {"Inflation & Geldpolitik" = "volkswirtschaft/inflation-geldpolitik.md"}
+  ]},
+  {"FRW" = [
+    "frw/index.md",
+    {"Bilanz & Erfolgsrechnung" = "frw/bilanz-erfolgsrechnung.md"},
+    {"Budget & Lohn" = "frw/budget-lohn.md"}
+  ]},
+  {"Geld & Leben" = [
+    "geld-leben/index.md",
+    {"Banken & Finanzierung" = "geld-leben/banken-finanzierung.md"},
+    {"Versicherungen & Vorsorge" = "geld-leben/versicherungen-vorsorge.md"}
+  ]},
+  {"Training" = [
+    "fallstudien/index.md",
+    {"Prüfungstraining" = "fallstudien/pruefungstraining.md"},
+    {"Rechtsfälle" = "fallstudien/rechtsfaelle.md"}
+  ]},
+  {"Methoden & KI" = [
+    "methoden/index.md",
+    {"KI-Prompts" = "methoden/ki-prompts.md"},
+    {"Quellenarbeit" = "methoden/quellenarbeit.md"}
+  ]},
+  {"Master-Struktur" = "struktur/master-inhaltsverzeichnis.md"}
+]
+
+[project.theme]
+variant = "modern"
+features = [
+  "navigation.instant",
+  "navigation.tabs",
+  "navigation.sections",
+  "navigation.expand",
+  "navigation.path",
+  "navigation.tracking",
+  "toc.follow",
+  "content.code.copy"
+]
+
+[[project.theme.palette]]
+scheme = "default"
+primary = "indigo"
+accent = "violet"
+toggle.icon = "lucide/moon"
+toggle.name = "Dunkelmodus aktivieren"
+
+[[project.theme.palette]]
+scheme = "slate"
+primary = "indigo"
+accent = "violet"
+toggle.icon = "lucide/sun"
+toggle.name = "Hellmodus aktivieren"

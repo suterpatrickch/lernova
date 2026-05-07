@@ -2,7 +2,8 @@ name: Deploy Lernova to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -18,16 +19,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+      - name: Python einrichten
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Install dependencies
+      - name: Abhängigkeiten installieren
         run: pip install -r requirements.txt
-      - name: Build site
+      - name: Webseite bauen
         run: zensical build
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - name: Pages konfigurieren
+        uses: actions/configure-pages@v5
+      - name: Artefakt hochladen
+        uses: actions/upload-pages-artifact@v3
         with:
           path: site
   deploy:
@@ -37,5 +42,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - id: deployment
+      - name: Zu GitHub Pages deployen
+        id: deployment
         uses: actions/deploy-pages@v4

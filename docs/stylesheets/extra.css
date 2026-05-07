@@ -1,0 +1,67 @@
+:root {
+  --ln-bg: #0b1020;
+  --ln-card: rgba(255,255,255,.08);
+  --ln-card-2: rgba(255,255,255,.12);
+  --ln-border: rgba(148,163,184,.25);
+  --ln-text: #e5e7eb;
+  --ln-muted: #a5b4fc;
+  --ln-violet: #8b5cf6;
+  --ln-blue: #2563eb;
+  --ln-cyan: #06b6d4;
+  --ln-green: #10b981;
+  --ln-amber: #f59e0b;
+  --ln-rose: #fb7185;
+}
+.md-typeset h1 { font-weight: 850; letter-spacing: -0.04em; }
+.md-typeset h2 { font-weight: 780; letter-spacing: -0.025em; }
+.md-main__inner { margin-top: 0; }
+.ln-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 3.4rem 2.2rem;
+  margin: 1rem 0 2rem 0;
+  border-radius: 28px;
+  color: white;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(6,182,212,.42), transparent 30%),
+    radial-gradient(circle at 20% 10%, rgba(139,92,246,.55), transparent 35%),
+    linear-gradient(135deg, #0b1020 0%, #111827 42%, #172554 100%);
+  box-shadow: 0 26px 80px rgba(15,23,42,.22);
+}
+.ln-hero:before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: radial-gradient(#ffffff 1px, transparent 1px);
+  background-size: 34px 34px;
+  opacity: .16;
+}
+.ln-hero > * { position: relative; z-index: 1; }
+.ln-hero h1 { margin: 0 0 .7rem 0; font-size: clamp(2.2rem, 5vw, 4.6rem); line-height: .95; color: white; }
+.ln-hero p { max-width: 760px; font-size: 1.15rem; color: #dbeafe; }
+.ln-badges { display: flex; gap: .55rem; flex-wrap: wrap; margin-top: 1.2rem; }
+.ln-badge { padding: .45rem .75rem; border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.09); border-radius: 999px; font-size: .78rem; font-weight: 750; }
+.ln-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; margin: 1.2rem 0 2rem; }
+.ln-card { border: 1px solid var(--ln-border); border-radius: 22px; padding: 1.1rem; background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03)); box-shadow: 0 12px 40px rgba(15,23,42,.08); }
+.ln-card h3 { margin-top: 0; font-size: 1.05rem; }
+.ln-card p { margin-bottom: 0; }
+.ln-card a { font-weight: 750; }
+.ln-icon { font-size: 1.8rem; display: inline-block; margin-bottom: .3rem; }
+.ln-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1rem 0 2rem; }
+@media (max-width: 780px) { .ln-steps { grid-template-columns: 1fr; } }
+.ln-step { border-radius: 24px; padding: 1.2rem; color: white; min-height: 180px; }
+.ln-step h3 { color: white; margin-top: 0; }
+.ln-step.verstehen { background: linear-gradient(135deg, #059669, #0f766e); }
+.ln-step.anwenden { background: linear-gradient(135deg, #2563eb, #7c3aed); }
+.ln-step.beurteilen { background: linear-gradient(135deg, #9333ea, #db2777); }
+.ln-linkcards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .8rem; margin: 1rem 0; }
+.ln-link { border: 1px solid var(--ln-border); border-radius: 18px; padding: .9rem; background: rgba(99,102,241,.06); }
+.ln-link strong { display:block; margin-bottom:.25rem; }
+.ln-prompt { border: 1px solid rgba(124,58,237,.35); border-radius: 18px; padding: 1rem; background: linear-gradient(180deg, rgba(124,58,237,.1), rgba(37,99,235,.06)); margin: .9rem 0; }
+.ln-prompt pre { margin: .65rem 0 0; }
+.copy-prompt { border: 0; border-radius: 999px; padding: .45rem .75rem; background: linear-gradient(90deg, var(--ln-violet), var(--ln-blue)); color: white; font-weight: 750; cursor: pointer; }
+.copy-prompt:hover { filter: brightness(1.08); }
+.ln-quiz { border: 1px solid rgba(6,182,212,.35); border-radius: 18px; padding: 1rem; background: rgba(6,182,212,.07); margin: 1rem 0; }
+.ln-quiz button { margin: .25rem .25rem .25rem 0; border: 1px solid var(--ln-border); border-radius: 12px; padding: .5rem .7rem; cursor: pointer; background: rgba(255,255,255,.08); }
+.ln-feedback { margin-top: .5rem; font-weight: 700; }
+.ln-profile { font-size: .92rem; color: var(--md-default-fg-color--light); margin-top: -.4rem; margin-bottom: 1rem; }
+.ln-tag { display:inline-block; margin: .15rem .2rem .15rem 0; padding: .25rem .5rem; border-radius: 999px; border:1px solid var(--ln-border); font-size: .75rem; }

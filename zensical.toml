@@ -12,6 +12,7 @@ nav = [
   {"Start" = "index.md"},
   {"Lernwege" = [
     "lernwege/index.md",
+    {"Lektionengerüst" = "lernwege/lektionengeruest.md"},
     {"WR Basics" = "lernwege/wr-basics.md"},
     {"Matura / BM / WMS" = "lernwege/matura-bm-wms.md"},
     {"Leben & Zukunft" = "lernwege/leben-zukunft.md"}
@@ -44,7 +45,8 @@ nav = [
   {"Geld & Leben" = [
     "geld-leben/index.md",
     {"Banken & Finanzierung" = "geld-leben/banken-finanzierung.md"},
-    {"Versicherungen & Vorsorge" = "geld-leben/versicherungen-vorsorge.md"}
+    {"Versicherungen & Vorsorge" = "geld-leben/versicherungen-vorsorge.md"},
+    {"Budget & Lohn" = "geld-leben/budget-lohn.md"}
   ]},
   {"Training" = [
     "fallstudien/index.md",
